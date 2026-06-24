@@ -11,17 +11,17 @@ export default function Button({
   type = 'button',
 }) {
   const base =
-    'inline-flex items-center justify-center font-semibold rounded-full transition-all duration-200 cursor-pointer';
+    'inline-flex items-center justify-center font-semibold transition-all duration-200 cursor-pointer';
 
   const variants = {
     primary:
-      'bg-[#13C9A4] text-white hover:bg-[#0fb892] hover:scale-105 active:scale-95',
+      'bg-[#13C9A4] text-white hover:bg-[#0fb892] rounded-full  hover:scale-105 active:scale-95',
     outline:
-      'border-2 border-[#13C9A4] text-[#13C9A4] bg-transparent hover:bg-[#13C9A4] hover:text-white hover:scale-105',
+      'border-2 border-[#13C9A4] text-[#13C9A4] bg-transparent hover:bg-[#13C9A4] hover:text-white transition rounded-[10px]',
     ghost:
-      'text-[#111111] bg-transparent hover:text-[#13C9A4] hover:scale-105',
+      'text-[#111111] bg-transparent hover:text-[#13C9A4] rounded-full  hover:scale-105',
     dark:
-      'bg-white text-[#111111] hover:bg-gray-100 hover:scale-105 active:scale-95',
+      'bg-white text-[#111111] hover:bg-gray-100 hover:scale-105 rounded-full  active:scale-95',
   };
 
   const sizes = {
