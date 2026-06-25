@@ -32,8 +32,8 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="p-20 bg-[#fbfbfb]">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="md:p-20 bg-[#fbfbfb] mt-45 md:mt-0">
+      <div className="max-w-7xl mx-auto px-6 pt-20 md:pt-0">
         {/* Header row */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-12">
           <div>
@@ -42,7 +42,7 @@ export default function HowItWorks() {
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lacus non orci euismod vestibulum vitae ut ex. Quisque ut arcu at lectus tristique auctor sit amet at turpis."
             />
           </div>
-          <div className="shrink-0">
+          <div className="hidden shrink-0 md:block">
             <Button variant="outline" size="md" className="mr-8">
               Learn More
             </Button>
@@ -50,16 +50,22 @@ export default function HowItWorks() {
         </div>
 
         {/* Steps grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 gap-6 lg:grid-cols-4 ">
           {steps.map(({ icon: Icon, title, description }) => (
             <Card key={title} padding="sm">
-              <div className="mb-4 w-12 h-12 rounded-[10px] flex items-center align-center justify-center">
-                <Icon size={40} className="text-[#13C9A4]" />
+              <div className="mb-4 h-12 w-12 rounded-[10px] flex items-center align-center justify-center">
+                <Icon size={40} className="text-[#00cc99]" />
               </div>
-              <h3 className="font-bold text-[#111111] mb-2 text-lg">{title}</h3>
+              <h3 className="font-bold text-[#111111] mb-2 text-md md:text-lg">{title}</h3>
               <p className="text-[#8a8a8a] text-xs leading-relaxed">{description}</p>
             </Card>
           ))}
+        </div>
+
+        <div className="mt-8 flex justify-center md:hidden">
+          <Button variant="outline" size="md">
+            Learn More
+          </Button>
         </div>
       </div>
     </section>

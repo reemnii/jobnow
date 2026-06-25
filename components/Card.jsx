@@ -13,9 +13,10 @@ export default function Card({
   return (
     <div
       className={`
-        bg-white rounded-3xl ${paddings[padding]}
-        ${hover ? 'transition-all duration-300 hover:-translate-y-1 cursor-pointer' : ''}
-        ${className} w-[250px] h-[190px]
+        bg-white rounded-[28px] border border-[#f2f2f2] shadow-[0_10px_30px_rgba(17,17,17,0.04)]
+        ${paddings[padding]}
+        ${hover ? 'transition-all duration-300 hover:-translate-y-1 cursor-pointer hover:shadow-[0_16px_36px_rgba(17,17,17,0.07)]' : ''}
+        ${className} w-full min-h-[220px]
       `}
     >
       {children}

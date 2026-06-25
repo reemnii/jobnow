@@ -30,7 +30,7 @@ export default function HeroSection() {
   return (
     <section className="bg-[#F5F5F5] h-[585px] flex flex-col">
       <Navbar />
-      <div className="flex flex-1 h-full">
+      <div className="flex flex-1 h-full flex-col md:flex-row items-center justify-between relative">
         {/* Left Side */}
         <div className="flex-1 flex items-center pl-20 pr-16 pt-[72px]">
           <div className="max-w-[560px]">
@@ -75,7 +75,7 @@ export default function HeroSection() {
         </div>
 
         {/* Right Side */}
-        <div className="w-[603px] h-full bg-[#00cc99] rounded-bl-[48px] relative overflow-hidden shrink-0">
+        <div className=" mt-10 md:mt-0 w-full h-100 md:w-[603px] md:h-full bg-[#00cc99] rounded-bl-[48px] relative overflow-hidden shrink-0">
           {floatingIcons.map(({ Icon, src, className, delay }, i) => (
             <div
               key={i}
