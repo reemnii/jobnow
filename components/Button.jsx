@@ -15,11 +15,11 @@ export default function Button({
 
   const variants = {
     primary:
-      'bg-[#13C9A4] text-white hover:bg-[#0fb892] rounded-full  hover:scale-105 active:scale-95',
+      'bg-[#00cc99] text-white hover:bg-[#0fb892] rounded-full  hover:scale-105 active:scale-95',
     outline:
-      'border-2 border-[#13C9A4] text-[#13C9A4] bg-transparent hover:bg-[#13C9A4] hover:text-white transition rounded-[10px]',
+      'border-2 border-[#00cc99] text-[#00cc99] bg-transparent hover:bg-[#00cc99] hover:text-white transition rounded-[10px]',
     ghost:
-      'text-[#111111] bg-transparent hover:text-[#13C9A4] rounded-full  hover:scale-105',
+      'text-[#111111] bg-transparent hover:text-[#00cc99] rounded-full  hover:scale-105',
     dark:
       'bg-white text-[#111111] hover:bg-gray-100 hover:scale-105 rounded-full  active:scale-95',
   };

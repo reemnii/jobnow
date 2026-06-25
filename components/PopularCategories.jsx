@@ -36,7 +36,7 @@ export default function PopularCategories() {
                 flex-shrink-0 rounded-3xl p-6 text-left w-48 transition-all duration-300
                 hover:-translate-y-1 hover:shadow-lg w-[250px] h-[175px]
                 ${activeIndex === idx
-                  ? 'bg-[#13C9A4] text-white shadow-lg shadow-[#13C9A4]/30'
+                  ? 'bg-[#00cc99] text-white shadow-lg shadow-[#00cc99]/30'
                   : 'bg-white text-[#111111] hover:shadow-md'}
               `}
             >
@@ -46,7 +46,7 @@ export default function PopularCategories() {
               >
                 <Icon
                   size={40}
-                  className={activeIndex === idx ? 'text-white' : 'text-[#13C9A4]'}
+                  className={activeIndex === idx ? 'text-white' : 'text-[#00cc99]'}
                 />
               </div>
               <h3 className="font-bold text-lg leading-snug mb-2">{title}</h3>

@@ -4,6 +4,7 @@ import HowItWorks from "../components/HowItWorks";
 import EmployeeAssistance from "@/components/EmployeeAssistance";
 import PopularCategories from "@/components/PopularCategories";
 import RecentJobs from "@/components/RecentJobs";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <EmployeeAssistance />
       <PopularCategories />
       <RecentJobs />
+      <Testimonials />
     </> 
   );
 }

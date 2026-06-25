@@ -55,7 +55,7 @@ export default function JobCard({
       {/* Apply */}
       <a
         href="#"
-        className="flex items-center gap-1 text-[#13C9A4] font-semibold text-sm hover:gap-2 transition-all"
+        className="flex items-center gap-1 text-[#00cc99] font-semibold text-sm hover:gap-2 transition-all"
       >
         Apply Now
         <ArrowRight size={14} />
