@@ -5,6 +5,8 @@ import EmployeeAssistance from "@/components/EmployeeAssistance";
 import PopularCategories from "@/components/PopularCategories";
 import RecentJobs from "@/components/RecentJobs";
 import Testimonials from "@/components/Testimonials";
+import CTASection from "@/components/CTASection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -15,6 +17,8 @@ export default function Home() {
       <PopularCategories />
       <RecentJobs />
       <Testimonials />
+      <CTASection />
+      <Footer />  
     </> 
   );
 }

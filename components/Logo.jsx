@@ -6,11 +6,15 @@ export default function Logo({ dark = false, size = 'md' }) {
   };
 
   return (
-    <span className={`font-extrabold ${sizes[size]}`}>
-      <span className={dark ? 'text-[#111111]' : 'text-white'}>
+    <span className={`font-extrabold whitespace-nowrap ${sizes[size]}`}>
+      <span className={'text-[#111111]' }>
         Job
       </span>
-      <span className="text-[#00cc99] inline-flex items-center">
+      <span
+        className={`inline-flex items-center ${
+          dark ? 'text-white' : 'text-[#00cc99]'
+        }`}
+      >
         N
         <svg
           aria-hidden="true"
