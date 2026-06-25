@@ -11,11 +11,11 @@ export default function EmployeeAssistance() {
           </div>
 
           {/* Right – Content */}
-          <div className="space-y-6">
-            <h2 className="text-2xl md:text-4xl font-bold text-[#111111] leading-tight text-center md:text-left">
+          <div className="space-y-6 px-10 md:px-0">
+            <h2 className="text-xl md:text-4xl font-bold text-[#111111] leading-tight text-center md:text-left">
               We will help you become an employee in your dream company
             </h2>
-            <p className="text-[#8a8a8a] leading-relaxed text-center md:text-left">
+            <p className="text-[#8a8a8a] text-sm md:text-md leading-relaxed text-center md:text-left">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
               lacus non orci euismod vestibulum vitae ut ex. Quisque ut arcu at
               lectus tristique auctor sit amet at turpis.

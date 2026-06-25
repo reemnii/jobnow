@@ -25,6 +25,15 @@ body {
   font-family: "DejaVu Sans", Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
 @keyframes float {
   0%,100% {
     transform: translateY(0px);

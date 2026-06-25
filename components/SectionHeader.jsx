@@ -10,7 +10,9 @@ export default function SectionHeader({
         {title}
       </h2>
       {description && (
-        <p className="text-gray-500 max-w-2xl leading-relaxed text-sm md:text-base">
+        <p
+          className={`${centered ? 'mx-auto text-center' : ''} text-gray-500 max-w-2xl leading-relaxed text-sm md:text-base`}
+        >
           {description}
         </p>
       )}
