@@ -8,7 +8,7 @@ import Button from './Button'
 const categories = [
   { icon: Brain, title: 'Design and Development', vacancies: 234 },
   { icon: ChartLine, title: 'Accounting and Finance', vacancies: 189 },
-  { icon: Landmark, title: 'Bank Institution', vacancies: 156 },
+  { icon: Landmark, title: 'Bank\nInstitution', vacancies: 156 },
   { icon: ClockFading, title: 'Product Management', vacancies: 302 },
   { icon: LoaderCircle, title: 'Customer Service', vacancies: 198 },
 ]
@@ -17,7 +17,7 @@ export default function PopularCategories() {
   const [activeIndex, setActiveIndex] = useState(0)
 
   return (
-    <section className="py-20 bg-[#d6f4ec]">
+    <section className="py-20  bg-[#F2FCFA]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
           <SectionHeader
@@ -33,8 +33,8 @@ export default function PopularCategories() {
               key={title}
               onClick={() => setActiveIndex(idx)}
               className={`
-                flex-shrink-0 rounded-3xl p-6 text-left w-48 transition-all duration-300
-                hover:-translate-y-1 hover:shadow-lg w-[250px] h-[175px]
+                flex-shrink-0 rounded-3xl p-6 text-left transition-all duration-300
+                hover:-translate-y-1 hover:shadow-lg w-[285px] h-[248px] whitespace-pre-line
                 ${activeIndex === idx
                   ? 'bg-[#00cc99] text-white shadow-lg shadow-[#00cc99]/30'
                   : 'bg-white text-[#111111] hover:shadow-md'}
@@ -45,13 +45,13 @@ export default function PopularCategories() {
                 }`}
               >
                 <Icon
-                  size={40}
+                  size={100}
                   className={activeIndex === idx ? 'text-white' : 'text-[#00cc99]'}
                 />
               </div>
-              <h3 className="font-bold text-lg leading-snug mb-2">{title}</h3>
+              <h3 className="font-bold text-2xl leading-snug">{title}</h3>
               <p
-                className={`text-xs ${
+                className={`text-xs w-[105px] h-[12px] mt-10 ${
                   activeIndex === idx ? 'text-white/80' : 'text-gray-400'
                 }`}
               >

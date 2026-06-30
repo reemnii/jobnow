@@ -28,11 +28,11 @@ const floatingIcons = [
 
 export default function HeroSection() {
   return (
-    <section className="bg-[#F5F5F5] h-[585px] flex flex-col">
-      <Navbar />
-      <div className="flex flex-1 h-full flex-col md:flex-row items-center justify-between relative">
+    <section className="relative bg-[#F5F5F5] h-[585px] flex flex-col mb-10 md:mb-0">
+      
+      <div className="flex flex-1 h-full flex-col md:flex-row items-center justify-between relative pt-[72px]">
         {/* Left Side */}
-        <div className="flex-1 flex items-center pl-20 pr-16 pt-[72px]">
+        <div className="flex-1 flex items-center pl-20 pr-16 pt-10 md:pt-[25px]">
           <div className="max-w-[560px]">
             <h1 className="text-[42px] font-black text-[#111111] leading-[1.1] tracking-[-1px] mb-5">
               Search, Find, &amp; Apply
@@ -45,7 +45,7 @@ export default function HeroSection() {
             </p>
 
             {/* Search Bar */}
-            <div className="bg-white rounded-[10px] p-4 shadow-lg flex items-center max-w-[651px] max-h-[90px]">
+            <div className="bg-white rounded-[10px] p-4 shadow-lg flex items-center mb-8 md:mb-0 max-w-[700px] md:w-[600px] max-h-[84px]">
               <div className="flex items-center gap-2 flex-1 bg-[#f2f2f2] rounded-[10px] p-2 ">
                 <Search size={17} className="text-black" />
                 <input
@@ -75,7 +75,7 @@ export default function HeroSection() {
         </div>
 
         {/* Right Side */}
-        <div className=" mt-10 md:mt-0 w-full h-100 md:w-[603px] md:h-full bg-[#00cc99] rounded-bl-[48px] relative overflow-hidden shrink-0">
+        <div className="w-full h-100 md:w-[603px] md:h-full bg-[#00cc99] rounded-bl-[48px] relative overflow-hidden shrink-0">
           {floatingIcons.map(({ Icon, src, className, delay }, i) => (
             <div
               key={i}

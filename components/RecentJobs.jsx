@@ -9,7 +9,7 @@ const jobs = [
     title: 'UI/UX Designer',
     company: 'Dimension Studio',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lacus non orci euismod vestibulum vitae ut ex.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lacus non orci euismod vestibulum vitae ut ex. Quisque ut arcu at lectus tristique auctor sit amet at turpis.',
     location: 'San Francisco, CA',
     type: 'Full Time',
   },
@@ -19,7 +19,7 @@ const jobs = [
     title: 'Full Stack Developer',
     company: 'Alpander',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lacus non orci euismod vestibulum vitae ut ex.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lacus non orci euismod vestibulum vitae ut ex. Quisque ut arcu at lectus tristique auctor sit amet at turpis.',
     location: 'San Francisco, CA',
     type: 'Full Time',
   },
@@ -29,7 +29,7 @@ const jobs = [
     title: 'Product Designer',
     company: 'XReact Tech',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lacus non orci euismod vestibulum vitae ut ex.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lacus non orci euismod vestibulum vitae ut ex.Quisque ut arcu at lectus tristique auctor sit amet at turpis.',
     location: 'San Francisco, CA',
     type: 'Full Time',
   },

@@ -15,11 +15,11 @@ function FooterDesktop() {
     <div className="hidden md:block">
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_0.8fr_1fr] lg:gap-10">
-          <div className="max-w-[330px]">
+          <div className="mx-10 max-w-[330px]">
             <div className="mb-6">
               <Logo dark size="lg" />
             </div>
-            <p className="text-[16px] leading-7 text-white/90">
+            <p className="text-[14px] leading-7 text-white/90">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consequat facilisis nibh vel faucibus.
             </p>
           </div>
@@ -36,7 +36,7 @@ function FooterDesktop() {
             </div>
           </div>
 
-          <div>
+          <div className="ml-12 ">
             <h4 className="mb-4 text-lg font-extrabold leading-none text-white">
               Pages
             </h4>

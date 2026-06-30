@@ -15,7 +15,7 @@ export default function JobCard({
     logoSrc === '/react.png' ? 'h-full w-full object-cover scale-[1.2] origin-center' : 'h-full w-full object-cover'
 
   return (
-    <div className="bg-white rounded-3xl p-6 w-[336px] h-[350px] transition-all duration-300 hover:-translate-y-2">
+    <div className="bg-white rounded-3xl p-6 max-w-[300px] md:max-w-[446px] max-h-[510px] transition-all duration-300 hover:-translate-y-2">
       {/* Logo */}
       <div
         className="w-14 h-14 rounded-full flex items-center justify-center mb-4 overflow-hidden"
@@ -25,8 +25,8 @@ export default function JobCard({
           <Image
             src={logoSrc}
             alt={logoAlt || `${company} logo`}
-            width={56}
-            height={56}
+            width={93}
+            height={93}
             className={logoImageClass}
           />
         ) : (
@@ -36,18 +36,18 @@ export default function JobCard({
         )}
       </div>
 
-      <h3 className="font-bold text-[#111111] text-lg mb-1">{title}</h3>
-      <p className="text-[#8a8a8a] text-sm font-medium mb-3">{company}</p>
-      <p className="text-[#8a8a8a] text-xs font-light leading-relaxed mb-4 line-clamp-3">{description}</p>
+      <h3 className="font-bold text-[#111111] text-lg w-[219px] h-22px] mb-1">{title}</h3>
+      <p className="text-[#8a8a8a] text-xs font-semibold mb-6">{company}</p>
+      <p className="text-[#8a8a8a] mb-8  text-xs w-[300px] md:w-[363px] h-[77px] font-medium leading-relaxed pr-9 line-clamp-3">{description}</p>
 
       {/* Meta */}
       <div className="flex items-center gap-4 text-xs text-gray-400 mb-5">
         <span className="flex items-center gap-1 text-black bg-[#f9f9f9] rounded-[10px] p-2">
-          <MapPin size={12} className="text-black" />
+          <MapPin size={14} className="text-black" />
           {location}
         </span>
         <span className="flex items-center gap-1 text-black bg-[#f9f9f9] rounded-[10px] p-2">
-          <BriefcaseBusiness size={12} className="text-black" />
+          <BriefcaseBusiness size={14} className="text-black" />
           {type}
         </span>
       </div>
@@ -55,7 +55,7 @@ export default function JobCard({
       {/* Apply */}
       <a
         href="#"
-        className="flex items-center gap-1 text-[#00cc99] font-semibold text-sm hover:gap-2 transition-all"
+        className="flex items-center gap-1 text-[#00cc99] font-semibold text-md hover:gap-2 transition-all mb-4 mt-10"
       >
         Apply Now
         <ArrowRight size={14} />

@@ -8,10 +8,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="h-full antialiased">
-      <head>
-        <link rel="stylesheet" href="https://use.typekit.net/rfy0ikf.css" />
-      </head>
+    <html lang="en" className="h-full antialiased font-sans">
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

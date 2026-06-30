@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ArrowLeft, ArrowRight } from 'lucide-react'
 import SectionHeader from './SectionHeader'
 const testimonials = [
   {
@@ -44,17 +44,17 @@ export default function Testimonials() {
 
             <SectionHeader
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lacus non orci euismod vestibulum vitae ut ex."
-              className="text-sm"
+              className="text-sm ml-4 md:ml-0 w-[400px] md:w-[480px] h-[45px]"
             />
 
             <div className="space-y-6">
-              <p className="mx-auto max-w-[340px] text-black leading-relaxed font-semibold text-md transition-all duration-300 md:mx-0 md:max-w-none">
+              <p className="mx-auto  text-black leading-relaxed font-semibold text-md transition-all duration-300 md:mx-0 md:max-w-none w-[450px] h-[38px] mb-15">
                 "{t.quote}"
               </p>
               <div className="mx-auto h-[320px] w-full max-w-[470px] rounded-[24px] bg-[#00cc99] md:hidden" />
-              <div>
-                <p className="font-bold text-[#111111] text-lg">{t.name}</p>
-                <p className="text-gray-400 text-sm">{t.position}</p>
+              <div className=' mt-25'>
+                <p className="font-bold text-[#111111] text-lg ">{t.name}</p>
+                <p className="text-gray-400 text-xs">{t.position}</p>
               </div>
             </div>
 
@@ -64,19 +64,19 @@ export default function Testimonials() {
                 onClick={prev}
                 className="w-10 h-10 cursor-pointer rounded-full text-white bg-[#d2d2d2] flex items-center justify-center hover:bg-[#c4c4c4] transition-colors"
               >
-                <ChevronLeft size={18} className="pointer-events-none text-white" />
+                <ArrowLeft size={18} className="pointer-events-none text-white" />
               </button>
               <button
                 type="button"
                 onClick={next}
-                className="w-10 h-10 cursor-pointer rounded-full bg-[#00cc99] text-white flex items-center justify-center hover:bg-[#0fb892] transition-colors"
+                className="w-10 h-10 cursor-pointer rounded-full bg-[#00cc99] text-white flex  items-center justify-center hover:bg-[#0fb892] transition-colors"
               >
-                <ChevronRight size={18} className="pointer-events-none" />
+                <ArrowRight size={18} className="pointer-events-none" />
               </button>
             </div>
           </div>
 
-          <div className="hidden md:flex mx-auto mt-8 lg:mt-0 rounded-[20px] w-[310px] h-[310px] md:w-[380px] md:h-[360px] overflow-hidden bg-[#00cc99] aspect-square items-center justify-center lg:ml-20" />
+          <div className="hidden md:flex mx-auto mt-8 lg:mt-0 rounded-[20px] w-[250px] h-[250px] md:w-[484px] md:h-[474px] overflow-hidden bg-[#00cc99] aspect-square items-center justify-center lg:mx-10" />
         </div>
       </div>
     </section>
