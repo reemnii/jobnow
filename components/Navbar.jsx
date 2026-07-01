@@ -25,7 +25,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/90 backdrop-blur-md shadow-sm border-b border-black/5'
+          ? 'bg-white/95 backdrop-blur-md shadow-[0_1px_0_rgba(0,0,0,0.06)] border-b border-black/5'
           : 'bg-transparent shadow-none border-b border-transparent'
       }`}
     >
@@ -63,7 +63,7 @@ export default function Navbar() {
 
         <div className="relative flex w-full items-center justify-end md:hidden">
           <div className="absolute left-1/2 -translate-x-1/2">
-            <Logo dark size="md" />
+            <Logo size="md" />
           </div>
 
           <button

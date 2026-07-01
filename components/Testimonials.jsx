@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import SectionHeader from './SectionHeader'
+import PageContainer from './PageContainer'
+
 const testimonials = [
   {
     quote:
@@ -34,51 +36,49 @@ export default function Testimonials() {
   const t = testimonials[current]
 
   return (
-    <section className="px-4 py-12 md:p-20 bg-[#F5F5F5]">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 items-center">
-          <div className="space-y-8 text-center md:text-left">
-            <div className="text-md">
-              <SectionHeader title="People's Feedback about JobNow!" />
-            </div>
+    <section className="bg-[#F5F5F5] py-16 md:py-24">
+      <PageContainer>
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(360px,0.9fr)]">
+          <div className="px-4 md:pl-10 max-w-2xl space-y-8 text-center lg:mx-0 lg:text-left">
+            <SectionHeader title="People's Feedback about JobNow!" />
 
             <SectionHeader
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lacus non orci euismod vestibulum vitae ut ex."
-              className="text-sm ml-4 md:ml-0 w-[400px] md:w-[480px] h-[45px]"
+              className="mx-auto max-w-xl lg:mx-0"
             />
 
             <div className="space-y-6">
-              <p className="mx-auto  text-black leading-relaxed font-semibold text-md transition-all duration-300 md:mx-0 md:max-w-none w-[450px] h-[38px] mb-15">
+              <p className="mx-auto md:max-w-xl text-base font-semibold leading-relaxed text-black lg:mx-0">
                 "{t.quote}"
               </p>
-              <div className="mx-auto h-[320px] w-full max-w-[470px] rounded-[24px] bg-[#00cc99] md:hidden" />
-              <div className=' mt-25'>
-                <p className="font-bold text-[#111111] text-lg ">{t.name}</p>
-                <p className="text-gray-400 text-xs">{t.position}</p>
+              <div className=" md:hidden aspect-square w-full max-w-[484px] rounded-[20px] bg-[#00cc99]" />
+              <div className="flex flex-col items-center gap-1 lg:items-start">
+                <p className="font-bold text-[#111111] text-lg">{t.name}</p>
+                <p className="text-xs text-gray-400">{t.position}</p>
               </div>
             </div>
 
-            <div className="flex items-center justify-center md:justify-start gap-3">
+            <div className="flex items-center justify-center gap-3 lg:justify-start">
               <button
                 type="button"
                 onClick={prev}
-                className="w-10 h-10 cursor-pointer rounded-full text-white bg-[#d2d2d2] flex items-center justify-center hover:bg-[#c4c4c4] transition-colors"
+                className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-[#d2d2d2] text-white transition-colors hover:bg-[#c4c4c4]"
               >
                 <ArrowLeft size={18} className="pointer-events-none text-white" />
               </button>
               <button
                 type="button"
                 onClick={next}
-                className="w-10 h-10 cursor-pointer rounded-full bg-[#00cc99] text-white flex  items-center justify-center hover:bg-[#0fb892] transition-colors"
+                className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-[#00cc99] text-white transition-colors hover:bg-[#0fb892]"
               >
                 <ArrowRight size={18} className="pointer-events-none" />
               </button>
             </div>
           </div>
 
-          <div className="hidden md:flex mx-auto mt-8 lg:mt-0 rounded-[20px] w-[250px] h-[250px] md:w-[484px] md:h-[474px] overflow-hidden bg-[#00cc99] aspect-square items-center justify-center lg:mx-10" />
+          <div className="mx-auto hidden aspect-square w-full max-w-[484px] rounded-[20px] bg-[#00cc99] md:block" />
         </div>
-      </div>
+      </PageContainer>
     </section>
   )
 }

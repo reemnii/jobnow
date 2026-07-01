@@ -1,10 +1,11 @@
 import Button from './Button'
+import PageContainer from './PageContainer'
 
 export default function CTASection() {
   return (
     <section className="bg-[#f5f5f5] pb-0">
-      <div className="mx-auto max-w-5xl px-4 md:px-6">
-        <div className="md:hidden relative z-10 -mb-16 mx-auto w-full max-w-[600px] bg-[#003a2c] rounded-[20px] py-6 px-5 text-center">
+      <PageContainer className="max-w-[1120px]">
+        <div className="md:hidden relative z-10 -mb-16 mx-auto w-full max-w-[500px] bg-[#003a2c] rounded-[20px] py-6 px-5 text-center">
           <h2 className="text-[22px] font-bold text-white mb-3">
             Register your CV now!
           </h2>
@@ -37,7 +38,7 @@ export default function CTASection() {
             Register Now
           </Button>
         </div>
-      </div>
+      </PageContainer>
     </section>
   )
 }

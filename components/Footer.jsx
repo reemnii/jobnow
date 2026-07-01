@@ -1,5 +1,6 @@
 import { FaGoogle, FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa'
 import Logo from './Logo'
+import PageContainer from './PageContainer'
 
 const pages = ['Home', 'Booking', 'Facilities', 'About Us', 'Location', 'Contact']
 
@@ -13,9 +14,9 @@ const socialIcons = [
 function FooterDesktop() {
   return (
     <div className="hidden md:block">
-      <div className="mx-auto max-w-7xl px-6 py-20">
+      <PageContainer className="py-20">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_0.8fr_1fr] lg:gap-10">
-          <div className="mx-10 max-w-[330px]">
+          <div className="max-w-[330px]">
             <div className="mb-6">
               <Logo dark size="lg" />
             </div>
@@ -36,15 +37,15 @@ function FooterDesktop() {
             </div>
           </div>
 
-          <div className="ml-12 ">
+          <div>
             <h4 className="mb-4 text-lg font-extrabold leading-none text-white">
               Pages
             </h4>
             <ul className="text-[15px] leading-7 text-white/90">
               {pages.map((page) => (
                 <li key={page} className="flex items-center gap-2">
-                  <span className="text-[18px] leading-none">&rsaquo;</span>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <span className="text-[18px] leading-none ">&rsaquo;</span>
+                  <a href="#" className="hover:text-gray-300 transition-colors hover:transition-x-1">
                     {page}
                   </a>
                 </li>
@@ -70,7 +71,7 @@ function FooterDesktop() {
             </div>
           </div>
         </div>
-      </div>
+      </PageContainer>
     </div>
   )
 }
@@ -78,7 +79,7 @@ function FooterDesktop() {
 function FooterMobile() {
   return (
     <div className="md:hidden">
-      <div className="mx-auto max-w-7xl px-6 py-12">
+      <PageContainer className="py-12">
         <div className="grid grid-cols-2 gap-x-8 gap-y-10">
           <div className="col-span-2 max-w-[330px]">
             <div className="mb-5">
@@ -109,7 +110,7 @@ function FooterMobile() {
               {pages.map((page) => (
                 <li key={page} className="flex items-center gap-2">
                   <span className="text-[16px] leading-none">&rsaquo;</span>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-gray-300 transition-colors">
                     {page}
                   </a>
                 </li>
@@ -135,7 +136,7 @@ function FooterMobile() {
             </div>
           </div>
         </div>
-      </div>
+      </PageContainer>
     </div>
   )
 }

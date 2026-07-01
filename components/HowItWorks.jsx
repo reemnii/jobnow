@@ -2,6 +2,7 @@ import { SquareArrowRightEnter, CalendarSearch , FileText, CircleFadingArrowUp ,
 import SectionHeader from './SectionHeader'
 import Button from './Button'
 import Card from './Card'
+import PageContainer from './PageContainer'
 
 const steps = [
   {
@@ -32,8 +33,8 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="md:p-20 bg-[#fbfbfb] mt-45 md:mt-0">
-      <div className="max-w-7xl mx-auto px-6 pt-20 md:pt-0">
+    <section className="bg-[#fbfbfb] pt-60 pb-20 md:py-24">
+      <PageContainer>
         {/* Header row */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-12">
           <div>
@@ -50,14 +51,14 @@ export default function HowItWorks() {
         </div>
 
         {/* Steps grid */}
-        <div className="grid grid-cols-2 gap-6 lg:grid-cols-4 ">
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
           {steps.map(({ icon: Icon, title, description }) => (
-            <Card key={title} padding="sm">
-              <div className="mb-4 h-12 w-12 rounded-[10px] flex items-center align-center justify-center">
+            <Card key={title} padding="sm" className="min-h-[220px] md:min-h-[240px] lg:min-h-[220px]">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-[10px]">
                 <Icon size={40} className="text-[#00cc99]" />
               </div>
-              <h3 className="font-bold text-[#111111] mb-2 text-md md:text-lg">{title}</h3>
-              <p className="text-[#8a8a8a] text-xs leading-relaxed">{description}</p>
+              <h3 className="mb-2 text-lg font-bold text-[#111111]">{title}</h3>
+              <p className="text-[#8a8a8a] text-xs md:text-sm leading-relaxed">{description}</p>
             </Card>
           ))}
         </div>
@@ -67,7 +68,7 @@ export default function HowItWorks() {
             Learn More
           </Button>
         </div>
-      </div>
+      </PageContainer>
     </section>
   )
 }

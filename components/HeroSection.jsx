@@ -29,35 +29,35 @@ const floatingIcons = [
 export default function HeroSection() {
   return (
     <section className="relative bg-[#F5F5F5] h-[585px] flex flex-col mb-10 md:mb-0">
-      
+      <div className="bg-transparent"> <Navbar /> </div>
       <div className="flex flex-1 h-full flex-col md:flex-row items-center justify-between relative pt-[72px]">
         {/* Left Side */}
         <div className="flex-1 flex items-center pl-20 pr-16 pt-10 md:pt-[25px]">
           <div className="max-w-[560px]">
-            <h1 className="text-[42px] font-black text-[#111111] leading-[1.1] tracking-[-1px] mb-5">
+            <h1 className="text-[30px] md:text-[42px] font-black text-[#111111] leading-[1.1] tracking-[-1px] mb-5">
               Search, Find, &amp; Apply
             </h1>
 
-            <p className="text-[15px] text-black leading-7 max-w-[594px] mb-9">
+            <p className="text-[12px] md:text-[15px] text-black leading-7 max-w-[594px] mb-9">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
               quis lacus non orci euismod vestibulum vitae ut ex. Quisque
               ut arcu at lectus tristique auctor sit amet at turpis.
             </p>
 
             {/* Search Bar */}
-            <div className="bg-white rounded-[10px] p-4 shadow-lg flex items-center mb-8 md:mb-0 max-w-[700px] md:w-[600px] max-h-[84px]">
+            <div className="bg-white rounded-[10px] p-4 shadow-lg flex items-center mb-8 md:mb-0 max-w-[600px] md:w-[600px] max-h-[84px]">
               <div className="flex items-center gap-2 flex-1 bg-[#f2f2f2] rounded-[10px] p-2 ">
                 <Search size={17} className="text-black" />
                 <input
                   type="text"
                   placeholder="Job title or keyword"
-                  className="w-full outline-none text-sm text-black bg-transparent placeholder:text-black placeholder:font-medium"
+                  className="w-full outline-none text-xs md:text-sm text-black bg-transparent placeholder:text-black placeholder:font-medium"
                 />
               </div>
 
-              <div className="w-px h-7 bg-[#f9f9f9]]]] mx-3" />
+              <div className="w-px h-7 bg-[#f9f9f9]]]]  mx-2 md:mx-3" />
 
-              <div className="flex items-center gap-2  bg-[#f2f2f2] rounded-[10px] p-2 ">
+              <div className="flex items-center gap-1 bg-[#f2f2f2] rounded-[10px] p-2 ">
                 <MapPin size={17} className="text-black" />
                 <select className="outline-none text-sm text-black bg-transparent cursor-pointer">
                   <option>Location</option>
@@ -67,7 +67,7 @@ export default function HeroSection() {
                 </select>
               </div>
 
-              <button className="w-[103px] h-[34px] cursor-pointer ml-3 rounded-[10px] bg-[#00cc99] text-white text-sm font-bold hover:bg-[#00b386] transition">
+              <button className="w-[75px] md:w-[103px] h-[34px] cursor-pointer ml-3 rounded-[10px] bg-[#00cc99] text-white text-xs md:text-sm font-bold hover:bg-[#00b386] transition">
                 Search
               </button>
             </div>

@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Brain, Palette, ChartLine, Landmark, ClockFading, LoaderCircle } from 'lucide-react'
 import SectionHeader from './SectionHeader'
 import Button from './Button'
+import PageContainer from './PageContainer'
 
 const categories = [
   { icon: Brain, title: 'Design and Development', vacancies: 234 },
@@ -17,9 +18,9 @@ export default function PopularCategories() {
   const [activeIndex, setActiveIndex] = useState(0)
 
   return (
-    <section className="py-20  bg-[#F2FCFA]">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-12">
+    <section className="bg-[#F2FCFA] py-16 md:py-24">
+      <PageContainer>
+        <div className="mb-12 text-center">
           <SectionHeader
             title="Popular Job Categories"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lacus non orci euismod vestibulum vitae ut ex. Quisque ut arcu at lectus tristique auctor sit amet at turpis."
@@ -27,46 +28,48 @@ export default function PopularCategories() {
           />
         </div>
 
-        <div className="flex gap-4 overflow-x-auto pb-4 -mx-2 px-15 scrollbar-hide ">
-          {categories.map(({ icon: Icon, title, vacancies }, idx) => (
-            <button
-              key={title}
-              onClick={() => setActiveIndex(idx)}
-              className={`
-                flex-shrink-0 rounded-3xl p-6 text-left transition-all duration-300
-                hover:-translate-y-1 hover:shadow-lg w-[285px] h-[248px] whitespace-pre-line
-                ${activeIndex === idx
-                  ? 'bg-[#00cc99] text-white shadow-lg shadow-[#00cc99]/30'
-                  : 'bg-white text-[#111111] hover:shadow-md'}
-              `}
-            >
-              <div
-                className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-4
-                }`}
+        <div
+          className="overflow-x-auto scrollbar-hide"
+          style={{ marginRight: 'calc(50% - 50vw)' }}
+        >
+          <div className="flex gap-4 pb-4 pr-6 md:pr-8">
+            {categories.map(({ icon: Icon, title, vacancies }, idx) => (
+              <button
+                key={title}
+                onClick={() => setActiveIndex(idx)}
+                className={`
+                  flex-shrink-0 rounded-3xl cursor-pointer p-6 text-left transition-all duration-300
+                  hover:-translate-y-1 hover:shadow-lg w-[250px] h-[200px] md:w-[285px] md:h-[248px] whitespace-pre-line
+                  ${activeIndex === idx
+                    ? 'bg-[#00cc99] text-white shadow-lg shadow-[#00cc99]/30'
+                    : 'bg-white text-[#111111] hover:shadow-md'}
+                `}
               >
-                <Icon
-                  size={100}
-                  className={activeIndex === idx ? 'text-white' : 'text-[#00cc99]'}
-                />
-              </div>
-              <h3 className="font-bold text-2xl leading-snug">{title}</h3>
-              <p
-                className={`text-xs w-[105px] h-[12px] mt-10 ${
-                  activeIndex === idx ? 'text-white/80' : 'text-gray-400'
-                }`}
-              >
-                {vacancies} Job Vacancy
-              </p>
-            </button>
-          ))}
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl">
+                  <Icon
+                    size={42}
+                    className={activeIndex === idx ? 'text-white' : 'text-[#00cc99]'}
+                  />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold leading-snug">{title}</h3>
+                <p
+                  className={`mt-5 md:mt-10 text-xs ${
+                    activeIndex === idx ? 'text-white' : 'text-gray-400'
+                  }`}
+                >
+                  {vacancies} Job Vacancy
+                </p>
+              </button>
+            ))}
+          </div>
         </div>
 
-        <div className="text-center mt-10">
+        <div className="mt-10 text-center">
           <Button variant="outline" size="md">
             View More
           </Button>
         </div>
-      </div>
+      </PageContainer>
     </section>
   )
 }

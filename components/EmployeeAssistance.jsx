@@ -1,21 +1,18 @@
 import Button from './Button'
+import PageContainer from './PageContainer'
 
 export default function EmployeeAssistance() {
   return (
-    <section className="py-10 md:py-20 bg-[#F5F5F5] ">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left – Image placeholder */}
-          <div className="h-[285px] h-[210px] md:w-[504px] md:h-[371px] rounded-[20px] overflow-hidden bg-[#c4c4c4] flex items-center justify-center md:ml-15">
-            
-          </div>
+    <section className="bg-[#F5F5F5] py-16 md:py-24">
+      <PageContainer>
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+          <div className="mx-auto aspect-[504/371] w-full max-w-[504px] rounded-[20px] bg-[#c4c4c4]" />
 
-          {/* Right – Content */}
-          <div className="space-y-6 px-10 md:px-0">
-            <h2 className="text-xl md:text-4xl font-bold text-[#111111] leading-tight text-center md:text-left">
+          <div className="space-y-6 p-6">
+            <h2 className="text-center text-xl font-bold leading-tight text-[#111111] md:text-left md:text-4xl">
               We will help you become an employee in your dream company
             </h2>
-            <p className="text-[#8a8a8a] text-sm md:text-md leading-relaxed text-center md:text-left">
+            <p className="text-center text-sm leading-relaxed text-[#8a8a8a] md:text-left md:text-base">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
               lacus non orci euismod vestibulum vitae ut ex. Quisque ut arcu at
               lectus tristique auctor sit amet at turpis.
@@ -27,7 +24,7 @@ export default function EmployeeAssistance() {
             </div>
           </div>
         </div>
-      </div>
+      </PageContainer>
     </section>
   )
 }

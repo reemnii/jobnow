@@ -1,6 +1,7 @@
 import SectionHeader from './SectionHeader'
 import JobCard from './JobCard'
 import Button from './Button'
+import PageContainer from './PageContainer'
 
 const jobs = [
   {
@@ -37,9 +38,9 @@ const jobs = [
 
 export default function RecentJobs() {
   return (
-    <section className="py-20 bg-[#fbfbfb]">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-12">
+    <section className="bg-[#fbfbfb] py-16 md:py-24">
+      <PageContainer>
+        <div className="mb-12 text-center">
           <SectionHeader
             title="Recently Added Jobs"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lacus non orci euismod vestibulum vitae ut ex. Quisque ut arcu at lectus tristique auctor sit amet at turpis."
@@ -47,15 +48,20 @@ export default function RecentJobs() {
           />
         </div>
 
-        <div className="md:hidden flex gap-4 overflow-x-auto pb-4 -mx-6 px-6 scrollbar-hide">
-          {jobs.map((job) => (
-            <div key={job.title} className="flex-none">
-              <JobCard {...job} />
-            </div>
-          ))}
+        <div
+          className="md:hidden overflow-x-auto scrollbar-hide"
+          style={{ marginRight: 'calc(50% - 50vw)' }}
+        >
+          <div className="flex gap-4 pb-4 pr-6">
+            {jobs.map((job) => (
+              <div key={job.title} className="flex-none">
+                <JobCard {...job} />
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-10">
+        <div className="hidden gap-6 md:grid md:grid-cols-2 lg:grid-cols-3">
           {jobs.map((job) => (
             <JobCard key={job.title} {...job} />
           ))}
@@ -66,7 +72,7 @@ export default function RecentJobs() {
             View More
           </Button>
         </div>
-      </div>
+      </PageContainer>
     </section>
   )
 }
